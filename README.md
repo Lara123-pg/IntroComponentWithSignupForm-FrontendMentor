@@ -15,8 +15,8 @@
 Clone o projeto em seu dispositivo e acesse a pasta do mesmo.
 
 ```
-$ git clone 
-$ cd 
+$ git clone https://github.com/Lara123-pg/IntroComponentWithSignupForm-FrontendMentor.git
+$ cd IntroComponentWithSignupForm-FrontendMentor
 $ code .  (Abrir o Visual Studio Code)
 ```
 Logo em seguida, o projeto estará em seu editor para ser executado.
