@@ -1,0 +1,5 @@
+@mixin BackgroundBorder($backgroundColor, $borderRadius) {
+    background-color: $backgroundColor;
+
+    border-radius: $borderRadius;
+}

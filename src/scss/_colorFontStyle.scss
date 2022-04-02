@@ -1,0 +1,9 @@
+@mixin ColorFontStyle($size: '', $color, $weight) {
+    @if $size != '' {
+        font-size: $size;
+    } 
+
+    color: $color;
+
+    font-weight: $weight;
+}

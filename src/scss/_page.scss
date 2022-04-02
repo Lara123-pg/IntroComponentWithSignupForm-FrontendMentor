@@ -1,0 +1,143 @@
+div.container {
+    @include Display(flex, space-around, center);
+
+    height: 100vh;
+
+    padding: 9em;
+
+    aside {
+        padding-right: 2em;
+
+        strong {
+            @include ColorFontStyle(2.7rem, $color1, 700);
+
+            line-height: 45px;
+        }
+
+        p {
+            @include ColorFontStyle(1rem, $color1, 400);
+
+            padding-top: 1.2em;
+            
+            width: 32em;
+        }
+    }
+
+    main {
+        div.form {
+            @include Display(flex, space-between);
+            height: 500px;
+
+            flex-direction: column;
+
+            div.containerForm {
+                @include ColorFontStyle(0.9rem, $color1, 400);
+                @include BackgroundBorder($color2, 10px);
+
+                text-align: center;
+
+                padding: 1.2em;
+                margin-bottom: 1.5em;
+
+                box-shadow: 0 7px rgba(62, 60, 73, 0.2);
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            form {
+                @include Display(flex, space-around);
+                @include BackgroundBorder($color1, 10px);
+
+                flex-direction: column;
+
+                width: 480px;
+                height: 450px;
+
+                padding: 2em;
+
+                box-shadow: 0 7px rgba(62, 60, 73, 0.2);
+
+                input {
+                    @include ColorFontStyle('', $color4, 600);
+
+                    height: 55px;
+
+                    padding-left: 2em;
+
+                    border: 1px solid $color3;
+                    border-radius: 5px;
+
+                    font-family: 'Poppins', sans-serif;
+
+                    &:focus {
+                        outline: 1px solid $color4;
+                    }
+
+                    &::placeholder {
+                        @include ColorFontStyle(0.8rem, $color4, 600);
+
+                        font-family: 'Poppins', sans-serif;
+
+                        opacity: 0.9;
+                    }
+                }
+
+                input.errorInput {
+                    border-color: $color6;
+                    color: $color6;
+
+                    background: url('../assets/icon-error.svg') 95% center no-repeat;
+                }
+
+                p.error {
+                    @include Display(flex, flex-end);
+                    @include ColorFontStyle(0.6rem, $color6, 500);
+
+                    padding: 0.6em 0 1.4em 0;
+                }
+
+                button {
+                    @include ColorFontStyle(0.9rem, $color1, 600);
+                    @include BackgroundBorder($color5, 5px);
+
+                    height: 55px;
+
+                    border: 0;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        opacity: 0.7;
+                    }
+                }
+
+                p {
+                    @include ColorFontStyle(0.6rem, $color3, 500);
+
+                    text-align: center;
+
+                    padding-top: 1em;
+
+                    span {
+                        @include ColorFontStyle(0.7rem, $color6, 700);
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
